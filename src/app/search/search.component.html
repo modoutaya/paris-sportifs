@@ -1,0 +1,25 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 keyword-wrapper">
+      <input
+        class="form-control"
+        [formControl]="queryField"
+        type="text"
+        id="keyword"
+        placeholder="Search by league..."
+        autofocus
+      />
+    </div>
+  </div>
+  <div class="row" *ngIf="results.length && !selected">
+    <div class="col-lg-10">
+    <ul class="filter-select">
+      <li class="filter-select-list" *ngFor="let result of results" (click)="emitLeague(result)">
+        <!-- <img [src]="result.logo" alt=""> -->
+        <span class="tags"> {{result.league}}</span>
+       </li>
+    </ul>
+  </div>
+  </div>
+</div>

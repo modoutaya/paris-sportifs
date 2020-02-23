@@ -1,0 +1,16 @@
+
+<div class="container" *ngIf="detailTeam">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <p class="h2">{{detailTeam.name}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <img [src]="detailTeam.banner" class="img-fluid">
+  </div>
+  <div class="row description-div">
+    <p class="font-weight-normal">
+      {{detailTeam.description}}
+    </p>
+  </div>
+</div>
