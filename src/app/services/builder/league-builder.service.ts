@@ -12,7 +12,7 @@ export class LeagueBuilderService {
       json.strLeague,
       json.strSport,
       json.strLeagueAlternate
-    )
+    );
   }
   createMultiLeague(leagueList) {
     return leagueList.map(elm => this.createLeague(elm));

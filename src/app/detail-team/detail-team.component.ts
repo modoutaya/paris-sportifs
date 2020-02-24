@@ -17,6 +17,7 @@ export class DetailTeamComponent implements OnInit, OnChanges {
   constructor(private teamService: TeamsService) { }
 
   ngOnInit(): void {
+    this.detailTeam = this.team;
   }
 
   ngOnChanges(changes: SimpleChanges) {

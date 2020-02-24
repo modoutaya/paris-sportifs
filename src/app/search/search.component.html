@@ -12,7 +12,7 @@
       />
     </div>
   </div>
-  <div class="row" *ngIf="results.length && !selected">
+  <div class="row" *ngIf="results.length > 0">
     <div class="col-lg-10">
     <ul class="filter-select">
       <li class="filter-select-list" *ngFor="let result of results" (click)="emitLeague(result)">

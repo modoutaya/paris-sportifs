@@ -2,6 +2,8 @@
 import { Team } from 'src/app/models/team.model';
 import { Injectable } from '@angular/core';
 
+import * as _ from 'lodash';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,6 +21,6 @@ export class TeamBuilderService {
   }
 
   createMultiTeam(teamList) {
-    return teamList.map(elm => this.createTeam(elm));
+    return _.chain(teamList).defaultTo([]).map(elm => this.createTeam(elm)).value();
   }
 }

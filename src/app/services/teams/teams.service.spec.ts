@@ -33,7 +33,6 @@ describe('TeamsService', () => {
     };
     service.getTeamsByLeague(dumpData.league).subscribe(data => {
       expect(data.length).toBe(1);
-      console.log(data);
       expect(data[0].id).toEqual(dumpData.teams[0].id);
     });
 

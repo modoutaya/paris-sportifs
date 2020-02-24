@@ -51,8 +51,7 @@ describe('DetailLeagueComponent', () => {
 
   it('should return true', () => {
     imageEl = fixture.debugElement.query(By.css('.container .row .col-md-5 a img'));
-    console.log();
-    expect(imageEl.nativeElement.alt).toEqual('team badge');
+    expect(imageEl.nativeElement.alt).toEqual('Bundesliga badge');
     expect(imageEl.nativeElement.src).toEqual('http://localhost:9876/badge%20test');
   });
 });

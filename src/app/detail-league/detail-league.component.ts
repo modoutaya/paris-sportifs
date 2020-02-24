@@ -33,6 +33,7 @@ export class DetailLeagueComponent implements OnInit, OnChanges {
     this.teamService.getTeamsByLeague(league)
     .subscribe(response => {
       this.teams = response;
+      this.emitTeam(null);
     });
   }
 
