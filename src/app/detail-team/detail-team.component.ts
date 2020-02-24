@@ -23,7 +23,7 @@ export class DetailTeamComponent implements OnInit, OnChanges {
     this.teamService.getTeamById(changes.team.currentValue.id)
     .subscribe(response => {
       this.detailTeam = response;
-    })
+    });
   }
 
 }

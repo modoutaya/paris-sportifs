@@ -18,15 +18,10 @@ export class DetailLeagueComponent implements OnInit, OnChanges {
   constructor(private teamService: TeamsService) { }
 
   ngOnInit(): void {
-    this.teams = [];
     this._getTeams(this.league);
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    // this.teamService.getTeamsByLeague(changes.league.currentValue)
-    // .subscribe(response => {
-    //   this.teams = response;
-    // })
     this._getTeams(changes.league.currentValue);
   }
 
@@ -38,7 +33,7 @@ export class DetailLeagueComponent implements OnInit, OnChanges {
     this.teamService.getTeamsByLeague(league)
     .subscribe(response => {
       this.teams = response;
-    })
+    });
   }
 
 }

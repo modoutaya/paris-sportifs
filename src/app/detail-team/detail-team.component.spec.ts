@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailTeamComponent } from './detail-team.component';
+import {HttpClientModule} from '@angular/common/http';
+import {TeamsService} from '../services/teams/teams.service';
 
 describe('DetailTeamComponent', () => {
   let component: DetailTeamComponent;
@@ -8,7 +10,11 @@ describe('DetailTeamComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DetailTeamComponent ]
+      imports: [
+        HttpClientModule
+      ],
+      declarations: [ DetailTeamComponent ],
+      providers: [TeamsService]
     })
     .compileComponents();
   }));
